@@ -1,0 +1,12 @@
+.toast, .toast-container, .me-auto{
+    background-color: transparent;
+}
+
+.toast-header{
+    font-size: 2rem;
+}
+
+.toast-body {
+    font-size: 1.5rem;
+    background-color: $toast-color;
+}

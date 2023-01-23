@@ -1,0 +1,33 @@
+nav {
+    padding-top: 20px;
+    background-color: $navback-color;
+    font-size: 4rem;
+    ul {
+      background: inherit;
+      li {
+        display: inline;
+        a {
+          background-color: $navback-color;
+          color: $font-color;
+          text-decoration: none;
+        }
+      }
+    }
+}
+
+button{
+  i {
+    font-size: 2rem;
+  }
+}
+
+#badge_carrito{
+  font-size: 1.2rem;
+}
+
+.img_carrito{
+  max-width: 60px;
+  max-height: 100px;
+}
+  
+

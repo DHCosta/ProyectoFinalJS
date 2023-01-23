@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #EEEEEE; }
+  *:before {
+    box-sizing: inherit; }
+  *:after {
+    box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+
+i, .modal, .fade, .modal-dialog, span {
+  background-color: transparent; }
+
+nav {
+  padding-top: 20px;
+  background-color: #c1c1c1;
+  font-size: 4rem; }
+  nav ul {
+    background: inherit; }
+    nav ul li {
+      display: inline; }
+      nav ul li a {
+        background-color: #c1c1c1;
+        color: #212427;
+        text-decoration: none; }
+
+button i {
+  font-size: 2rem; }
+
+#badge_carrito {
+  font-size: 1.2rem; }
+
+.img_carrito {
+  max-width: 60px;
+  max-height: 100px; }
+
+.card {
+  padding: 0 !important; }
+
+.card-body > h5 {
+  font-size: 2.5rem; }
+
+.card-body > p {
+  font-size: 1.5rem;
+  color: #696969; }
+
+.card-body .btn {
+  font-size: 1.8rem; }
+
+.card-body div .precio {
+  font-size: 2.5rem;
+  color: #212427;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-right: 10px; }
+
+.toast, .toast-container, .me-auto {
+  background-color: transparent; }
+
+.toast-header {
+  font-size: 2rem; }
+
+.toast-body {
+  font-size: 1.5rem;
+  background-color: #bebebe83; }
+
+.nav_tit {
+  margin-left: 80px; }
+
+.contenedor_carrito {
+  padding: 150px 400px 50px 100px; }
+
+.contenedor_cursos, .cont_link_compra {
+  background-color: transparent; }
+  .contenedor_cursos a, .cont_link_compra a {
+    color: red !important; }
+
+.comp_cabecera {
+  font-size: 2rem; }
+  .comp_cabecera a {
+    font-size: 1.4rem;
+    color: #696969;
+    text-decoration: none; }
+    .comp_cabecera a:hover {
+      color: inherit; }
+
+.img_carrito_compra {
+  max-width: 120px; }
+
+.list-group-item * {
+  background-color: transparent; }
+
+.btn-compra {
+  font-size: 1.6rem !important; }
+
+.precio_total {
+  background-color: transparent; }
+
+.titulo_ppal {
+  font-size: 8rem;
+  font-weight: 200;
+  padding: 180px 0 40px 0; }

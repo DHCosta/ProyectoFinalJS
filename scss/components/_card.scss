@@ -1,0 +1,27 @@
+.card {
+    padding: 0 !important;
+}
+
+.card-body {
+    > h5{
+        font-size: $font-size-card_tittle;
+    }
+    > p {
+        font-size: $font-size-card_expl;
+        color: $font-color-card_expl;
+    }
+    .btn {
+        font-size: $font-size-card_button;
+    }
+    div{
+        .precio{
+            font-size: 2.5rem;
+            color: $font-color;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding-right: 10px;
+        }
+    }
+}
+

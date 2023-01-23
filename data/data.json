@@ -1,0 +1,38 @@
+[
+    {
+        "nombre": "Pequeña Historia del Arte Ilustrada", 
+        "detalle": "Nos vamos de paseo por el mundo del arte y sus maravillas: desde las pirámides de Giza, hasta la escuela de la Bauhaus...", 
+        "precio": 4000,
+        "imagen": "./media/historiailus.png" 
+    },
+    {
+        "nombre": "Historia de una Artista", 
+        "detalle": "Abordaremos el trabajo de artistas cuyas obras se inscriben en el marco de movimientos como el surrealismo, el barroco, el impresionismo, la abstracción...", 
+        "precio": 3000,
+        "imagen": "./media/historiadeunaart.png"
+    },
+    {
+        "nombre": "Historia de un Artista", 
+        "detalle": "Te propongo encuentros biográficos para conocer la obra y recorrer la vida de los grandes protagonistas de la historia del arte. Artistas que lograron transformaciones...", 
+        "precio": 3000,
+        "imagen": "./media/historiadeunartista.png" 
+    },
+    {
+        "nombre": "Zoom a la Obra", 
+        "detalle": "Te propongo una serie de encuentros on-line para hacer ZOOM sobre las grandes obras maestras de la historia del arte. Te invito a recorrer juntos el interior...", 
+        "precio": 2000,
+        "imagen": "./media/zoomalaob.png" 
+    },
+    {
+        "nombre": "1 Hora en el Museo", 
+        "detalle": "Cuando viajamos y tenemos la posibilidad de recorrer las ciudades más importantes del mundo, la simple idea de entrar a sus museos se vuelve un dilema...", 
+        "precio": 5000,
+        "imagen": "./media/unahoraenelmuseo.jpg" 
+    },
+    {
+        "nombre": "Obra en Construcción", 
+        "detalle": "¿Te gustaría conocer un poquito más sobre el detrás de escena de la Historia del Arte? ¿Cuántas veces nos encontramos frente a una obra de arte y sentimos...", 
+        "precio": 2000,
+        "imagen": "./media/obraenconstruccion.jpg" 
+    }
+]

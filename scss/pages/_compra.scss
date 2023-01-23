@@ -1,0 +1,42 @@
+.nav_tit{
+    margin-left: 80px;
+}
+
+.contenedor_carrito{
+    padding: 150px 400px 50px 100px;
+}
+
+.contenedor_cursos, .cont_link_compra{
+    background-color: transparent;
+    a{
+        color: red !important;
+    }
+}
+
+.comp_cabecera{
+    font-size: 2rem;
+    a{  
+        font-size: 1.4rem;
+        color: $font-color-head_link;
+        text-decoration: none;
+        &:hover{
+            color: inherit;
+        }
+    }
+}
+
+.img_carrito_compra{
+    max-width: 120px;
+}
+
+.list-group-item *{
+    background-color: transparent;
+}
+
+.btn-compra{
+    font-size: 1.6rem !important;
+}
+
+.precio_total{
+    background-color: transparent;
+}

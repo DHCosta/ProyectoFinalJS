@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <title>Cursos NOESARTE</title>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar fixed-top">
+            <ul class="navbar-left py-3">
+                <li class="nav_tit"><a href="#">NOESARTE</a></li>
+            </ul> 
+        </nav>
+    </header>
+    
+    <main class="container-fluid">
+        <div class="contenedor_carrito">
+            <div class="row">
+                <div class="col shadow-sm mb-5 bg-body-tertiary rounded d-flex justify-content-between align-items-center comp_cabecera py-5 px-5">
+                    <span id="cant_cursos"></span>
+                    <a class="btn btn-link" href="./index.html" role="button">Continuar comprando <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col shadow-sm mb-5 bg-body-tertiary rounded d-flex justify-content-between align-items-center comp_cabecera py-5">
+                    <div class="container-fluid contenedor_cursos">
+                        <div class="cont_link_compra d-flex justify-content-end">
+                            <a class="btn btn-link pt-0 mb-3" href="#" role="button"><i class="bi bi-cart2"></i> Tramitar pedido <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                        <ul id="items_compra" class="list-group list-group-flush"></ul>
+                        <div class="d-flex justify-content-end mt-5 mx-3">
+                            <p class="fs-2 precio_total mt-3 pe-3 py-4">Total <span id="total_compra"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col shadow-sm mb-5 bg-body-tertiary rounded d-flex justify-content-end align-items-center comp_cabecera py-5 px-5">
+                    <button type="button" class="btn btn-danger btn-compra"><i class="bi bi-cart2 pe-3"></i> Tramitar pedido <i class="bi bi-arrow-right ps-3"></i></button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="./compra.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
