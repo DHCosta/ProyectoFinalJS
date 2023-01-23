@@ -1,7 +1,6 @@
 let carrito = [];
 let carrito_ls = get_carrito_localStorage();
 
-
 /*la siguiente validacion la he agregado por si se llegase a borrar el carrito manualmente desde el browser 
 (no debiera suceder nunca en un uso normal de la pagina)*/
 if (carrito_ls === null){
@@ -14,7 +13,8 @@ renderizar_carrito ();
 actualizar_total_carrito();
 
 
-const renderizarCursos = async () => {
+/* Recupera la informacion de los Cursos del archivo data.json y renderiza el index con los mismos */
+const renderizar_cursos = async () => {
     const contenedor_cursos = document.getElementById("cont_cursos")
 
     const resp = await fetch('http://localhost:5500/data/data.json');
@@ -46,44 +46,15 @@ const renderizarCursos = async () => {
     }
 }
 
-renderizarCursos();
+renderizar_cursos();
 
+/* Renderiza el Carrito invocando a la funcion listar_en_carrito */
 function renderizar_carrito (){
     carrito = get_carrito_localStorage();
     carrito.forEach((curso) => listar_en_carrito(curso));
 }
 
-function guardar_localStorage (carrito){
-
-    let carrito_JSON = JSON.stringify(carrito);
-    localStorage.setItem("carrito" , carrito_JSON);
-}
-
-function get_carrito_localStorage (){
-    let carrito_en_LS = localStorage.getItem("carrito");
-    return JSON.parse(carrito_en_LS);
-}
-
-function actualizar_badge_carrito(){
-
-    let badge_carrito = document.getElementById("badge_carrito")
-    let recupero_carrito = JSON.parse(localStorage.getItem("carrito"));
-
-    (recupero_carrito !=null) ? (badge_carrito.innerText = recupero_carrito.length) : (badge_carrito.innerText = 0)
-}
-
-function actualizar_total_carrito(){
-    let total_c = 0;
-
-    carrito.forEach((item) => {
-        total_c  += parseInt(item.precio.slice(1),10);
-    });
-
-    let total = document.getElementById("total");
-    total.textContent = "$"+total_c;
-
-}
-
+/* Modifica el DOM agregando los Cursos en la tabla del Carrito */
 function listar_en_carrito(curso){
 
     let fila = document.createElement("tr");
@@ -98,15 +69,50 @@ function listar_en_carrito(curso){
 
     let btn_borrar = document.querySelectorAll(".borrar_elemento");
     for( let boton of btn_borrar){
-        boton.addEventListener("click" , borrar_producto);
+        boton.addEventListener("click" , borrar_curso);
     }
-    
 }
 
+/* Gestionar LocalStorage */
+function guardar_localStorage (carrito){
+    let carrito_JSON = JSON.stringify(carrito);
+    localStorage.setItem("carrito" , carrito_JSON);
+}
+
+function get_carrito_localStorage (){
+    let carrito_en_LS = localStorage.getItem("carrito");
+    return JSON.parse(carrito_en_LS);
+}
+
+
+/* Renderiza el badge del Carrito consultando los elementos del LocalStorage */
+function actualizar_badge_carrito(){
+
+    let badge_carrito = document.getElementById("badge_carrito")
+    let recupero_carrito = JSON.parse(localStorage.getItem("carrito"));
+
+    (recupero_carrito !=null) ? (badge_carrito.innerText = recupero_carrito.length) : (badge_carrito.innerText = 0)
+}
+
+/* Renderiza el saldo total en el Carrito */
+function actualizar_total_carrito(){
+    let total_c = 0;
+
+    carrito.forEach((item) => {
+        total_c  += parseInt(item.precio.slice(1),10);
+    });
+
+    let total = document.getElementById("total");
+    total.textContent = "$"+total_c;
+
+}
+
+/* Verifica si el curso seleccionado existe en el Carrito */
 function existe(nombre) {
     return carrito.find(curso => curso.nombre === nombre);
 }
 
+/* Modifica el DOM para agregar al Carrito los Cursos seleccionados */
 function agregar_a_carrito(e){
 
     let nombre_producto;
@@ -158,7 +164,9 @@ function agregar_a_carrito(e){
     }
 }
 
-function borrar_producto(e){
+
+/* Elimina del Carrito el Curso seleccionado y lo renderiza*/
+function borrar_curso(e){
 
     let abuelo = e.target.parentNode.parentNode;
 
@@ -176,6 +184,7 @@ function borrar_producto(e){
 let btn_vaciar_carrito = document.getElementById("vaciar_carrito");
 btn_vaciar_carrito.addEventListener("click" , vaciar_carrito);
 
+/* Vacia del Carrito y lo renderiza*/
 function vaciar_carrito(){
     carrito = [];
     guardar_localStorage (carrito);
