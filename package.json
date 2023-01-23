@@ -1,7 +1,7 @@
 {
-  "name": "EntregaFinal",
+  "name": "entregafinal",
   "version": "1.0.0",
-  "description": "",
+  "description": "Proyecto Final",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,5 +16,13 @@
   },
   "dependencies": {
     "bootstrap-icons": "^1.10.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DHCosta/ProyectoFinalJS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DHCosta/ProyectoFinalJS/issues"
+  },
+  "homepage": "https://github.com/DHCosta/ProyectoFinalJS#readme"
 }
